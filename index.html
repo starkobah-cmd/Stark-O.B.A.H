@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const originalFetch = window.fetch;
+        try {
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return originalFetch; },
+            set: function(val) {
+              // Ignore attempts to overwrite window.fetch
+              console.warn("Ignored attempt to overwrite window.fetch");
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.error("Could not patch window.fetch", e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FF5722" />
+    <meta name="color-scheme" content="light" />
+    <meta name="google-site-verification" content="9gPZPSwVUz7Jjjye5NZnulP-ay_H19A3-r3r0r3hEYQ" />
+    <title>Metazivo | SEO, AEO & GEO Agency for Rapid Ranking Growth</title>
+    <meta name="description" content="Dominate search with Metazivo – expert SEO, AEO, GEO, WordPress development & Meta Ads. Get high-performance websites that rank fast and convert better." />
+    <meta name="keywords" content="SEO agency, AEO agency, GEO optimization, WordPress development, Meta Ads, digital growth agency, Metazivo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://metazivo.com/" />
+    
+    <!-- Resource Hints & LCP Preload for Instant Google Core Web Vitals -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=75" fetchpriority="high" />
+    
+    <!-- Open Graph (OG) Tags for WhatsApp, Facebook, LinkedIn previews -->
+    <meta property="og:title" content="Metazivo | SEO, AEO & GEO Agency for Rapid Ranking Growth" />
+    <meta property="og:description" content="Dominate search with Metazivo – expert SEO, AEO, GEO, WordPress development & Meta Ads. Get high-performance websites that rank fast and convert better." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metazivo.com/" />
+    <meta property="og:image" content="https://metazivo.com/og-image.jpg" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Metazivo | SEO, AEO & GEO Agency for Rapid Ranking Growth" />
+    <meta name="twitter:description" content="Dominate search with Metazivo – expert SEO, AEO, GEO, WordPress development & Meta Ads. Get high-performance websites that rank fast and convert better." />
+    <meta name="twitter:image" content="https://metazivo.com/og-image.jpg" />
+    
+    <!-- Favicon / Brand Styling -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <!-- Google AdSense Verification Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1646740033423564" crossorigin="anonymous"></script>
+    
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-METAZIVO01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-METAZIVO01');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1182390899982440');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- Technical SEO JSON-LD Structured Data Schema Graph -->
+    <script type="application/ld+json" id="metazivo-schema-org">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+          "@id": "https://metazivo.com/#organization",
+          "name": "Metazivo",
+          "legalName": "Metazivo Digital Agency",
+          "url": "https://metazivo.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://metazivo.com/#logo",
+            "url": "https://metazivo.com/favicon.svg",
+            "contentUrl": "https://metazivo.com/favicon.svg",
+            "caption": "Metazivo Logo"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://metazivo.com/og-image.jpg"
+          },
+          "telephone": "+92 328 8518557",
+          "email": "mail@metazivo.com",
+          "priceRange": "$$",
+          "currenciesAccepted": "USD, PKR, EUR, GBP",
+          "paymentAccepted": "Cash, Credit Card, Bank Transfer, PayPal",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.7294,
+            "longitude": 73.0931
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Office 402, Metazivo Heights, Sector F-5",
+            "addressLocality": "Islamabad",
+            "addressRegion": "Islamabad Capital Territory",
+            "postalCode": "44000",
+            "addressCountry": "PK"
+          },
+          "sameAs": [
+            "https://www.facebook.com/share/1DLnu9iaHK/",
+            "https://twitter.com/metazivo",
+            "https://www.linkedin.com/in/ali-hassan-a5011240a",
+            "https://www.instagram.com/metazivo",
+            "https://www.youtube.com/@metazivo"
+          ],
+          "description": "Dominate search with Metazivo – expert SEO, AEO, GEO, WordPress development & Meta Ads. Get high-performance websites that rank fast and convert better."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://metazivo.com/#website",
+          "url": "https://metazivo.com/",
+          "name": "Metazivo",
+          "publisher": { "@id": "https://metazivo.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://metazivo.com/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- Instant Critical Shell Styles: Prevents unstyled text flash (FOUC) and ensures instant dark branding -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #020617;
+        color: #f8fafc;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .preloader-shell {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #020617;
+        z-index: 9999;
+      }
+      .preloader-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 87, 34, 0.15);
+        border-top-color: #FF5722;
+        border-radius: 50%;
+        animation: spinPreloader 0.7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes spinPreloader {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1182390899982440&ev=PageView&noscript=1" alt="" /></noscript>
+    <div id="root">
+      <div class="preloader-shell">
+        <div class="preloader-spinner"></div>
+      </div>
+    </div>
+    <noscript>
+      <!-- Semantic initial crawler DOM (Immediately crawlable by Googlebot, SEOptimer, and search indexers without JS) -->
+      <header>
+        <nav aria-label="Main Navigation">
+          <a href="/">Metazivo Growth Engine</a>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/free-tools">Free Tools</a></li>
+            <li><a href="/tools/website-speed-test">Website Speed Test</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <article>
+          <header>
+            <p>Top Rated Digital Agency</p>
+            <h1>Websites Built to Load Fast and Win Top Search Rankings</h1>
+            <p>We help growing businesses build custom websites, improve organic search visibility, and run profitable customer acquisition campaigns. No slow templates, no inflated marketing promises—just clean code and measurable results.</p>
+            <p>
+              <a href="/contact">Start Your Project</a> | <a href="/services">Explore Services</a>
+            </p>
+          </header>
+          <section id="capabilities">
+            <h2>Core Digital Growth Services</h2>
+            <ul>
+              <li>
+                <h3><a href="/service/wordpress-development">WordPress &amp; WooCommerce Development</a></h3>
+                <p>Fast, custom WordPress websites engineered for quick page loads, smooth mobile browsing, and measurable organic search rankings.</p>
+              </li>
+              <li>
+                <h3><a href="/service/seo">Search Engine Optimization (SEO) &amp; Authority Content</a></h3>
+                <p>Data-driven technical SEO audits, high-intent keyword research, Core Web Vitals fixes, and content strategies that rank your business on Google page 1.</p>
+              </li>
+              <li>
+                <h3><a href="/service/meta-ads-advertising">Meta Ads &amp; Paid Acquisition Systems</a></h3>
+                <p>High-ROI advertising campaigns on Instagram and Facebook with tested ad creatives, precise audience targeting, and real conversion tracking.</p>
+              </li>
+              <li>
+                <h3><a href="/service/website-development">High-Performance Custom Website Development</a></h3>
+                <p>Custom React and Next.js web applications built with clean code, sub-second load times, and structured metadata for search engines.</p>
+              </li>
+              <li>
+                <h3><a href="/service/mobile-app-development">Mobile Application Development</a></h3>
+                <p>Cross-platform iOS and Android applications built with Flutter and React Native for smooth performance and offline data persistence.</p>
+              </li>
+              <li>
+                <h3><a href="/service/ai-mobile-apps">AI Mobile Apps</a></h3>
+                <p>Mobile applications with secure server-side AI integrations, voice processing, and automated user workflows.</p>
+              </li>
+            </ul>
+          </section>
+          <section id="company-contact">
+            <h2>Contact &amp; Location Details</h2>
+            <address>
+              <strong>Metazivo Digital Agency</strong><br />
+              Office 402, Metazivo Heights, Sector F-5, Islamabad, 44000, Pakistan<br />
+              Phone: <a href="tel:+923288518557">+92 328 8518557</a><br />
+              Email: <a href="mailto:mail@metazivo.com">mail@metazivo.com</a>
+            </address>
+          </section>
+        </article>
+      </main>
+      <footer>
+        <nav aria-label="Footer Navigation">
+          <a href="/about">About Metazivo</a> |
+          <a href="/services">Services</a> |
+          <a href="/portfolio">Portfolio</a> |
+          <a href="/blog">Blog</a> |
+          <a href="/pricing">Pricing</a> |
+          <a href="/free-tools">Free Meta Tag Generator</a> |
+          <a href="/tools/website-speed-test">Website Speed Test</a> |
+          <a href="/contact">Contact Us</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/terms">Terms of Service</a>
+        </nav>
+        <section aria-label="Social Media">
+          <a href="https://www.facebook.com/share/1DLnu9iaHK/" rel="noopener noreferrer" target="_blank">Facebook</a> |
+          <a href="https://instagram.com/metazivo" rel="noopener noreferrer" target="_blank">Instagram</a> |
+          <a href="https://www.linkedin.com/in/ali-hassan-a5011240a" rel="noopener noreferrer" target="_blank">LinkedIn</a> |
+          <a href="https://www.youtube.com/@metazivo" rel="noopener noreferrer" target="_blank">YouTube</a> |
+          <a href="https://twitter.com/metazivo" rel="noopener noreferrer" target="_blank">X (Twitter)</a>
+        </section>
+        <p>&copy; 2026 Metazivo. All rights reserved.</p>
+      </footer>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

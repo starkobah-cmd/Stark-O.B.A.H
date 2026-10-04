@@ -1,0 +1,12 @@
+{
+  "name": "Metazivo",
+  "description": "Dominate search with Metazivo – expert SEO, AEO, GEO, WordPress development & Meta Ads. Get high-performance websites that rank fast and convert better.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

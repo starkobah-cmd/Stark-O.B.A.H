@@ -1,0 +1,24 @@
+# Metazivo
+
+> Metazivo is a premier digital agency providing high-performance WordPress development, technical SEO auditing, E-E-A-T content strategy, Meta and Google advertising management, and full-stack web engineering.
+
+## Overview
+
+Metazivo helps modern businesses, healthcare brands, e-commerce stores, and technology startups scale organic traffic, eliminate technical debt, and maximize ROAS with data-driven engineering and marketing systems.
+
+## Primary Services
+
+- [WordPress Development](https://metazivo.com/service/wordpress-development): Enterprise custom themes, headless architectures, WooCommerce speed engineering, security hardening, and sub-second Core Web Vitals optimization.
+- [Technical & Programmatic SEO](https://metazivo.com/service/seo): In-depth indexing audits, crawl budget optimization, Schema.org semantic graphs, international SEO, and Core Web Vitals remediation.
+- [Meta Ads Management](https://metazivo.com/service/meta-ads-advertising): High-converting Facebook & Instagram ad funnels, Conversions API (CAPI) server-side tracking, creative retargeting, and scalable ROAS.
+- [SEO Content Writing](https://metazivo.com/service/seo-content-writing): Search-intent-matched authoritative articles, topical authority clusters, E-E-A-T compliance, and semantic keyword integration.
+- [Social Media Management](https://metazivo.com/service/social-media-management): Organic multi-channel brand growth, visual aesthetics, audience engagement, and community management.
+- [Website Development](https://metazivo.com/service/website-development): Modern responsive web applications, custom CMS integrations, performance auditing, and full-stack solutions.
+
+## Contact & Verification
+
+- Website: https://metazivo.com
+- Contact Email: mail@metazivo.com
+- WhatsApp / Phone: +92 328 8518557
+- Headquarters: Islamabad, Pakistan / Global Remote Delivery
+- Founder / Lead: Mehar Ali Hassan

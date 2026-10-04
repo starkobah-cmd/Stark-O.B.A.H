@@ -1,0 +1,328 @@
+{
+  "posts": [
+    {
+      "id": "post-core-web-vitals-playbook",
+      "title": "Mastering Core Web Vitals in 2026: The Definitive Speed Engineering Playbook",
+      "slug": "mastering-core-web-vitals-2026",
+      "excerpt": "Learn how modern frontend teams achieve sub-800ms LCP, zero CLS, and superior INP responsiveness using edge hydration, prefetching, and asset optimization.",
+      "content": "<h2>The Evolution of Web Performance</h2><p>Google's search ranking signals place unprecedented emphasis on user experience metrics: <strong>Largest Contentful Paint (LCP)</strong>, <strong>Interaction to Next Paint (INP)</strong>, and <strong>Cumulative Layout Shift (CLS)</strong>. A fast website doesn't just rank higher; it converts at over 2.4x the rate of slower competitors.</p><h3>1. Cracking Largest Contentful Paint (LCP) Under 1.2s</h3><p>The biggest bottleneck in modern web applications is resource load delay. To optimize your LCP element (typically the hero image or primary headline):</p><ul><li>Always add <code>fetchpriority=\"high\"</code> and <code>preload</code> links in your HTML <code>&lt;head&gt;</code>.</li><li>Self-host critical typography using modern WOFF2 formats with <code>font-display: swap</code>.</li><li>Utilize Next-Gen WebP and AVIF responsive image formats tailored to viewport breakpoints.</li></ul><blockquote>\"Every 100ms improvement in page speed directly correlates with a 1.1% increase in session duration and revenue lift across organic search funnels.\"</blockquote><h3>2. Conquering Interaction to Next Paint (INP)</h3><p>INP evaluates overall page responsiveness by measuring the latency of all click, tap, and keyboard interactions throughout the entire user lifecycle. Avoid heavy main-thread JavaScript execution during user input by offloading work into web workers or utilizing <code>requestIdleCallback</code>.</p><h3>Summary Checklist</h3><p>Audit your critical rendering path continuously using real field data (CrUX) and synthetic lab metrics. Fast websites win organic rankings and build long-term customer trust.</p>",
+      "author": "Ali Hassan",
+      "publishDate": "2026-09-28",
+      "status": "published",
+      "sticky": true,
+      "categories": ["Engineering", "SEO"],
+      "tags": ["Core Web Vitals", "Performance", "LCP", "Next.js"],
+      "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "seoTitle": "Mastering Core Web Vitals in 2026 | Metazivo Engineering",
+      "seoDescription": "Comprehensive playbook for achieving 99+ Core Web Vitals scores, sub-800ms LCP, and zero CLS on high-traffic websites.",
+      "seoScore": 98,
+      "views": 1420
+    },
+    {
+      "id": "post-generative-engine-optimization",
+      "title": "Generative Engine Optimization (GEO): How to Rank in Gemini and AI Search Engines",
+      "slug": "generative-engine-optimization-geo-guide",
+      "excerpt": "Traditional keyword matching is yielding to semantic LLM retrieval. Explore actionable architectural strategies to make your brand citations authoritative in AI summaries.",
+      "content": "<h2>Beyond Classic Search: The Era of AI Answers</h2><p>Search engines are no longer just lists of blue links. Large language models like Google Gemini, SearchGPT, and Perplexity synthesize answers directly from authoritative sources. This shift has given birth to <strong>Generative Engine Optimization (GEO)</strong>.</p><h3>Core Principles of Semantic Indexing</h3><p>To be referenced and quoted in AI answers:</p><ol><li><strong>Entity-Dense Authority:</strong> Structure your content around verifiable entities, statistics, and structured schema graphs.</li><li><strong>High-Information Density:</strong> AI models prefer concise, data-backed paragraphs over keyword-stuffed fluff.</li><li><strong>Comprehensive JSON-LD Schemas:</strong> Provide explicit <code>TechArticle</code> and <code>FAQPage</code> schemas for seamless machine parsing.</li></ol><p>Start auditing your brand's presence across generative platforms today to establish digital moat advantages early.</p>",
+      "author": "Ali Hassan",
+      "publishDate": "2026-09-24",
+      "status": "published",
+      "sticky": false,
+      "categories": ["AI & Tools", "SEO"],
+      "tags": ["GEO", "AI Search", "Gemini", "Optimization"],
+      "featuredImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+      "seoTitle": "Generative Engine Optimization (GEO) Guide | Metazivo",
+      "seoDescription": "Step-by-step methodology to structure your technical content for citation in Gemini and AI-driven search models.",
+      "seoScore": 94,
+      "views": 980
+    },
+    {
+      "id": "post-modern-react-architecture",
+      "title": "Full-Stack Single-Page App Architecture: Blending Vite, Node.js and Edge Rendering",
+      "slug": "full-stack-spa-architecture-vite-nodejs",
+      "excerpt": "A deep dive into decoupling presentation from backend logic while maintaining instant sub-second rendering, dynamic metadata injection, and zero build bloat.",
+      "content": "<h2>Modern SPA Infrastructure</h2><p>Building resilient, lightweight web applications requires striking the right balance between client interactivity and server-side predictability. By uniting Vite's lightning-fast compilation with Express proxy engines and Firebase persistence, engineers unlock unprecedented development velocity.</p><h3>Key Architectural Decisions</h3><ul><li><strong>Zero Bloat:</strong> Eliminate unused legacy libraries and keep production bundles under 500kB.</li><li><strong>Dynamic OpenGraph Prerendering:</strong> Inject rich social sharing cards server-side for search crawlers while keeping the browser bundle completely interactive.</li><li><strong>Resilient Local &amp; Cloud Fallbacks:</strong> Combine local JSON caches with distributed cloud storage to ensure zero downtime.</li></ul><p>Clean architecture is not an afterthought; it is the fundamental foundation of software longevity.</p>",
+      "author": "Ali Hassan",
+      "publishDate": "2026-09-20",
+      "status": "published",
+      "sticky": false,
+      "categories": ["Engineering", "Web Dev"],
+      "tags": ["Architecture", "React", "Vite", "Node.js"],
+      "featuredImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+      "seoTitle": "Full-Stack SPA Architecture Guide | Metazivo Engineering",
+      "seoDescription": "Architectural guidelines for pairing Vite with Node.js and dynamic SEO prerendering.",
+      "seoScore": 96,
+      "views": 750
+    }
+  ],
+  "media": [
+    {
+      "folder": "branding",
+      "id": "media-1",
+      "mimeType": "image/png",
+      "size": 45200,
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80",
+      "createdAt": "2026-07-11T00:00:00Z",
+      "name": "metazivo_logo.png",
+      "altText": "Metazivo Digital Agency Minimalist Premium Brand Identity",
+      "caption": "Metazivo Main Brand Mark"
+    },
+    {
+      "folder": "website-development",
+      "id": "media-2",
+      "name": "web_dev_banner.jpg",
+      "mimeType": "image/jpeg",
+      "createdAt": "2026-07-11T01:30:00Z",
+      "altText": "Modern website performance dashboard displaying speed metrics",
+      "url": "",
+      "size": 245000,
+      "caption": "High Conversion Website Architecture"
+    },
+    {
+      "caption": "Comprehensive Technical SEO Auditing Dashboard",
+      "id": "media-3",
+      "url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
+      "size": 198000,
+      "mimeType": "image/png",
+      "altText": "Google Search Console performance analysis graphics",
+      "createdAt": "2026-07-11T02:15:00Z",
+      "folder": "seo",
+      "name": "seo_dashboard.png"
+    }
+  ],
+  "leads": [
+    {
+      "message": "Hello Metazivo, we want to redesign our clinic website. Our current site is extremely slow and has terrible SEO. Please let us know your pricing and timelines.",
+      "name": "Sarah Jenkins",
+      "status": "unread",
+      "phone": "+1 415 882 1930",
+      "notes": "",
+      "id": "lead-1",
+      "email": "sarah@luminahealth.com",
+      "service": "Website Redesign & Speed Optimization",
+      "createdAt": "2026-07-11T04:22:15Z"
+    },
+    {
+      "phone": "+92 300 1234567",
+      "id": "lead-2",
+      "message": "We need an elegant Shopify store for our luxury apparel brand and we are looking for Metazivo to run Facebook and Meta ad campaigns.",
+      "createdAt": "2026-07-10T15:10:00Z",
+      "service": "Shopify Development & Meta Ads",
+      "name": "Ahmed Khan",
+      "email": "ahmed@khan-ecom.co",
+      "status": "replied",
+      "notes": "Called him. Shared quotation. Scheduled follow up for next Tuesday."
+    }
+  ],
+  "redirects": [
+    {
+      "toPath": "/services",
+      "id": "redir-1",
+      "createdAt": "2026-07-11T03:00:00Z",
+      "statusCode": 301,
+      "fromPath": "/old-services",
+      "hits": 41
+    }
+  ],
+  "views": 12578,
+  "visitors": 4850,
+  "viewsHistory": [
+    {
+      "views": 1800,
+      "date": "Jul 5",
+      "visitors": 650
+    },
+    {
+      "date": "Jul 6",
+      "visitors": 780,
+      "views": 2100
+    },
+    {
+      "views": 1950,
+      "visitors": 720,
+      "date": "Jul 7"
+    },
+    {
+      "visitors": 910,
+      "views": 2400,
+      "date": "Jul 8"
+    },
+    {
+      "date": "Jul 9",
+      "views": 2050,
+      "visitors": 820
+    },
+    {
+      "visitors": 1100,
+      "date": "Jul 10",
+      "views": 2900
+    },
+    {
+      "views": 1250,
+      "date": "Jul 11",
+      "visitors": 480
+    },
+    {
+      "visitors": 1,
+      "views": 2,
+      "date": "Jul 30"
+    },
+    {
+      "date": "Jul 31",
+      "visitors": 1,
+      "views": 8
+    },
+    {
+      "visitors": 1,
+      "views": 6,
+      "date": "Aug 7"
+    },
+    {
+      "visitors": 1,
+      "views": 9,
+      "date": "Aug 8"
+    },
+    {
+      "visitors": 1,
+      "views": 10,
+      "date": "Sep 19"
+    },
+    {
+      "visitors": 1,
+      "date": "Sep 20",
+      "views": 15
+    },
+    {
+      "views": 7,
+      "date": "Sep 21",
+      "visitors": 1
+    },
+    {
+      "views": 10,
+      "date": "Sep 22",
+      "visitors": 1
+    },
+    {
+      "views": 30,
+      "visitors": 1,
+      "date": "Sep 23"
+    },
+    {
+      "visitors": 1,
+      "views": 4,
+      "date": "Sep 24"
+    },
+    {
+      "views": 18,
+      "visitors": 1,
+      "date": "Sep 25"
+    },
+    {
+      "views": 9,
+      "visitors": 1,
+      "date": "Sep 26"
+    }
+  ],
+  "tags": [],
+  "pages": [
+    {
+      "seoDescription": "Metazivo builds custom high-performance websites, optimized WordPress stores, Shopify websites, and runs advanced Meta and Google Ads campaigns.",
+      "slug": "home",
+      "title": "Home",
+      "isSystem": true,
+      "seoKeywords": [
+        "digital agency",
+        "web development",
+        "SEO",
+        "Shopify",
+        "Meta Ads"
+      ],
+      "content": "<h2>Metazivo Agency Core</h2><p>Our custom-built, optimized landing page architecture.</p>",
+      "id": "page-home",
+      "seoTitle": "Metazivo | Premium Digital Agency for High-Performance Architectures"
+    },
+    {
+      "seoKeywords": [
+        "about agency",
+        "metazivo developers",
+        "technical agency team"
+      ],
+      "slug": "about",
+      "title": "About",
+      "isSystem": true,
+      "seoDescription": "Metazivo's history, mission, and technical values designed to scale software operations globally.",
+      "id": "page-about",
+      "seoTitle": "About Metazivo | Enterprise Digital Architects",
+      "content": "<h2>We are Metazivo</h2><p>A full-stack engineered agency with global roots.</p>"
+    },
+    {
+      "isSystem": true,
+      "id": "page-services",
+      "seoKeywords": [
+        "services list",
+        "agency services",
+        "seo development",
+        "shop themes"
+      ],
+      "content": "<h2>Premium Agency Services</h2><p>Explore our engineering capabilities.</p>",
+      "slug": "services",
+      "title": "Services",
+      "seoTitle": "Our Services | Custom Systems & Marketing Funnels | Metazivo",
+      "seoDescription": "Web Development, WordPress Custom Themes, Shopify Stores, Advanced SEO audits, and High-ROI Meta advertising."
+    },
+    {
+      "slug": "pricing",
+      "seoTitle": "Pricing Packages & CMS Retainers | Metazivo",
+      "id": "page-pricing",
+      "seoKeywords": [
+        "agency pricing",
+        "monthly retainer fee",
+        "web design pricing"
+      ],
+      "seoDescription": "High-performance services tailored to scale starting at competitive rates. Choose Web development or marketing campaigns.",
+      "isSystem": true,
+      "content": "<h2>Transparent Enterprise Packages</h2><p>Select a budget plan suited to your velocity.</p>",
+      "title": "Pricing"
+    },
+    {
+      "id": "page-privacy",
+      "content": "<h2>Privacy and Cookie Management</h2><p>Your privacy and GDPR security protocol details.</p>",
+      "seoKeywords": [
+        "privacy policies",
+        "cookies terms",
+        "gdpr compliance data"
+      ],
+      "isSystem": true,
+      "title": "Privacy Policy",
+      "seoDescription": "Understand cookies, analytical node monitoring, and lead verification data storage policies.",
+      "seoTitle": "Privacy Policy & GDPR Compliance | Metazivo",
+      "slug": "privacy"
+    },
+    {
+      "seoKeywords": [
+        "terms and services",
+        "user license agreement",
+        "client liability terms"
+      ],
+      "isSystem": true,
+      "id": "page-terms",
+      "seoDescription": "Review intellectual property guidelines, payment gateways terms, and service liabilities.",
+      "slug": "terms",
+      "title": "Terms & Conditions",
+      "content": "<h2>Terms of Service Agreement</h2><p>The rules governing the use of the Metazivo network portal.</p>",
+      "seoTitle": "Terms & Conditions Agreement | Metazivo"
+    }
+  ],
+  "settings": {
+    "customHeadTags": ""
+  },
+  "contact": {
+    "phone": "+92 328 8518557",
+    "email": "mail@metazivo.com",
+    "instagram": "https://instagram.com/metazivo",
+    "linkedin": "https://www.linkedin.com/in/ali-hassan-a5011240a",
+    "whatsapp": "+923288518557",
+    "facebook": "https://www.facebook.com/share/1DLnu9iaHK/",
+    "address": "Chungi Gujjar Pura, Lahore, Punjab 54000, Pakistan"
+  }
+}

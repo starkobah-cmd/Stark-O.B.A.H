@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="metaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A45" />
+      <stop offset="100%" stop-color="#FF5722" />
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Rect with brand corner rounding -->
+  <rect width="512" height="512" rx="140" fill="url(#metaGrad)" />
+  <!-- Minimalist custom-engineered 'M' with lightning/speed tech aesthetic -->
+  <path d="M140 370 V150 H195 L256 242 L317 150 H372 V370 H324 V222 L256 324 L188 222 V370 Z" fill="#ffffff" />
+  <!-- Subtle tech shadow to give it 3D depth matching the Notion 3D feel -->
+  <path d="M256 242 L317 150 H290 L256 201 Z" fill="#000000" opacity="0.1" />
+</svg>

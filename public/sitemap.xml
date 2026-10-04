@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- 1. Core Primary Static Pages -->
+  <url>
+    <loc>https://metazivo.com/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://metazivo.com/og-image.jpg</image:loc>
+      <image:title>Metazivo Digital Agency</image:title>
+      <image:caption>Bespoke WordPress Development, Meta Ads &amp; Advanced SEO Agency</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://metazivo.com/services</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/free-tools</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Dedicated URL for Free Meta Title & Description Generator Tool -->
+  <url>
+    <loc>https://metazivo.com/tools/meta-title-description-generator</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Free Website Speed Test & Core Web Vitals Audit Tool -->
+  <url>
+    <loc>https://metazivo.com/tools/website-speed-test</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/blog</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/portfolio</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/pricing</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/about</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/contact</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 2. All 11 High-Performance Agency Service Landing Pages -->
+  <url>
+    <loc>https://metazivo.com/service/website-development</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/wordpress-development</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://metazivo.com/wp_portfolio_mockup_1783857299220.jpg</image:loc>
+      <image:title>Metazivo WordPress Development Performance Dashboard</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/seo</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://metazivo.com/seo_portfolio_mockup_1783857320829.jpg</image:loc>
+      <image:title>Metazivo Technical SEO Keyword Audits</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/ai-mobile-apps</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/mobile-app-development</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/meta-ads-advertising</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://metazivo.com/meta_ads_leads_mockup_1783857339213.jpg</image:loc>
+      <image:title>Metazivo Meta Ads Funnel Setup</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/social-media-management</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/graphic-design-branding</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/video-editing</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/saas-applications</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/service/chatbots</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. High-Authority Blog Posts -->
+  <url>
+    <loc>https://metazivo.com/blog/website-speed-optimization-ultimate-guide</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/blog/maximize-roi-advanced-meta-ads-funnels</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 4. Legal & Compliance Pages -->
+  <url>
+    <loc>https://metazivo.com/privacy-policy</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://metazivo.com/terms</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
