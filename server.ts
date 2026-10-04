@@ -9,7 +9,6 @@ import fs from "fs";
 import crypto from "crypto";
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
-import { createServer as createViteServer } from "vite";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -532,7 +531,8 @@ async function startServer() {
   const isProd = process.env.NODE_ENV === "production" || fs.existsSync(path.join(distPath, "index.html"));
 
   if (!isProd) {
-    // Development Mode with Vite Middleware
+    // Development Mode with Vite Middleware (dynamically loaded only in dev)
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "custom"
@@ -586,8 +586,8 @@ async function startServer() {
     });
   } else {
     const port = Number(rawPort) || 3000;
-    app.listen(port, () => {
-      console.log(`Metazivo Server is running on port ${port}`);
+    app.listen(port, "0.0.0.0", () => {
+      console.log(`Metazivo Server is running on port ${port} (0.0.0.0)`);
     });
   }
 }
