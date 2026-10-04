@@ -528,8 +528,8 @@ function injectBlogSEO(html: string, pathname: string): string {
 // SERVER INITIALIZATION (DEV & PROD)
 // -----------------------------------------------------------------------------
 async function startServer() {
-  const isProd = process.env.NODE_ENV === "production";
   const distPath = path.join(process.cwd(), "dist");
+  const isProd = process.env.NODE_ENV === "production" || fs.existsSync(path.join(distPath, "index.html"));
 
   if (!isProd) {
     // Development Mode with Vite Middleware
@@ -570,14 +570,26 @@ async function startServer() {
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.status(200).send(rendered);
       } catch (e) {
-        res.status(200).send("<!DOCTYPE html><html><head><title>Metazivo Blog</title></head><body><div id='root'></div></body></html>");
+        res.status(200).send("<!DOCTYPE html><html><head><title>Metazivo</title></head><body><div id='root'></div></body></html>");
       }
     });
   }
 
-  app.listen(Number(PORT), "0.0.0.0", () => {
-    console.log(`Metazivo Blog Server is running at http://0.0.0.0:${PORT}`);
-  });
+  const rawPort = process.env.PORT;
+  if (typeof (global as any).PhusionPassenger !== "undefined") {
+    (app as any).listen("passenger", () => {
+      console.log("Metazivo Server is running with Phusion Passenger");
+    });
+  } else if (rawPort && isNaN(Number(rawPort))) {
+    app.listen(rawPort, () => {
+      console.log(`Metazivo Server is running on socket: ${rawPort}`);
+    });
+  } else {
+    const port = Number(rawPort) || 3000;
+    app.listen(port, () => {
+      console.log(`Metazivo Server is running on port ${port}`);
+    });
+  }
 }
 
 startServer();

@@ -2,33 +2,17 @@
   RewriteEngine On
   RewriteBase /
 
-  # If dist folder exists (e.g. repo cloned directly into public_html)
-  RewriteCond %{DOCUMENT_ROOT}/dist/index.html -f
-  RewriteCond %{REQUEST_URI} !^/dist/
-  RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI} -f
-  RewriteRule ^(.*)$ /dist/$1 [L]
+  # Do not rewrite existing files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-  RewriteCond %{DOCUMENT_ROOT}/dist/index.html -f
-  RewriteCond %{REQUEST_URI} !^/dist/
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /dist/index.html [L]
-
-  # Standard SPA routing if files are in root
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
+  # Prevent rewrite recursion loop on LiteSpeed/Apache
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteRule ^ index.html [L]
 </IfModule>
 
-# Security & Compression Headers
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
-</IfModule>
-
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
+# MIME type for JavaScript modules
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
 </IfModule>

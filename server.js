@@ -1,11 +1,17 @@
 /**
- * Hostinger Production Entrypoint
+ * Hostinger Production Entrypoint (ES Module Compatible)
  */
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+import { execSync } from 'child_process';
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'production';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const require = createRequire(import.meta.url);
+
+process.env.NODE_ENV = 'production';
 
 // Ensure data directory exists
 const dataDir = path.join(__dirname, 'data');
