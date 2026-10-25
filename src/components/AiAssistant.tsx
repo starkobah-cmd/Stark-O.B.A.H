@@ -19,7 +19,7 @@ export default function AiAssistant({ currentPostTitle, onApplyMetadata, onApply
         onClick={() => {
           if (currentPostTitle && onApplyMetadata) {
             onApplyMetadata({
-              seoTitle: `${currentPostTitle} | Metazivo`,
+              seoTitle: `${currentPostTitle} | NetronomicWeb`,
               seoDescription: `Comprehensive engineering guide on ${currentPostTitle}. Detailed benchmarks and playbooks.`,
               slug: currentPostTitle.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
               focusKeywords: ["SEO", "Web Performance"],

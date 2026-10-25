@@ -54,10 +54,10 @@ const TypewriterText: React.FC<{ phrases?: string[] }> = ({ phrases = DEFAULT_PH
 
   return (
     <span className="inline-flex items-center min-h-[1.2em] max-w-full whitespace-nowrap overflow-hidden">
-      <span className="bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent font-extrabold pb-1 whitespace-nowrap">
+      <span className="text-blue-600 font-extrabold pb-1 whitespace-nowrap">
         {currentText}
       </span>
-      <span className="inline-block w-[3.5px] h-[0.85em] bg-sky-500 ml-1.5 animate-pulse rounded-full shadow-[0_0_10px_#38bdf8] shrink-0" />
+      <span className="inline-block w-[3.5px] h-[0.85em] bg-blue-600 ml-1.5 animate-pulse rounded-full shadow-[0_0_10px_#2563eb] shrink-0" />
     </span>
   );
 };
@@ -111,12 +111,14 @@ export const Hero: React.FC<HeroProps> = ({ onGetStarted, onExploreServices, sit
               <span>Netronomic - Exploring Modern Tech & Web Development</span>
             </div>
 
-            {/* Main Heading with Animated Typing Effect */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.18] min-h-[110px] sm:min-h-[135px] flex flex-col justify-start">
-              <span>{heroData.titlePrefix}</span>
-              <div className="mt-1 sm:mt-2.5 overflow-visible">
+            {/* Main Heading: 1st line static black title prefix, 2nd line blue typing animation */}
+            <h1 className="tracking-tight leading-tight flex flex-col justify-start">
+              <span className="text-xl sm:text-2xl font-bold text-black tracking-tight block">
+                {heroData.titlePrefix || 'Accelerate Your Brand with'}
+              </span>
+              <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 mt-1 sm:mt-2 min-h-[1.25em] flex items-center overflow-visible">
                 <TypewriterText phrases={heroData.typingPhrases} />
-              </div>
+              </span>
             </h1>
 
             {/* Short Introduction */}

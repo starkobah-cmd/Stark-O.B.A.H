@@ -18,8 +18,9 @@ export const AboutUs: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider whitespace-nowrap">
             <span className="whitespace-nowrap">About Us</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Who We Are, Our Mission & <span className="text-sky-600">Our Vision</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Who We Are, Our Mission & <br className="hidden sm:inline" />
+            <span className="text-blue-600">Our Strategic Vision</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
             Learn about our core philosophy, digital craftsmanship, and commitment to driving measurable client success.

@@ -12,11 +12,11 @@ if (!fs.existsSync(distDir) || !fs.existsSync(indexHtmlFile)) {
 
 function toAbsoluteImageUrl(imgUrl) {
   if (!imgUrl || typeof imgUrl !== 'string') {
-    return 'https://netronomic.com/og-image.jpg';
+    return 'https://netronomicweb.com/og-image.jpg';
   }
   const trimmed = imgUrl.trim();
   if (trimmed.startsWith('data:') || !trimmed) {
-    return 'https://netronomic.com/og-image.jpg';
+    return 'https://netronomicweb.com/og-image.jpg';
   }
   if (trimmed.startsWith('http://')) {
     return trimmed.replace(/^http:\/\//i, 'https://');
@@ -25,9 +25,9 @@ function toAbsoluteImageUrl(imgUrl) {
     return trimmed;
   }
   if (trimmed.startsWith('/')) {
-    return `https://netronomic.com${trimmed}`;
+    return `https://netronomicweb.com${trimmed}`;
   }
-  return `https://netronomic.com/${trimmed}`;
+  return `https://netronomicweb.com/${trimmed}`;
 }
 
 const escapeAttr = (str) => String(str || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -46,10 +46,10 @@ try {
   for (const post of posts) {
     if (!post.slug) continue;
 
-    const title = post.seoTitle || post.ogTitle || `${post.title} | Netronomic`;
+    const title = post.seoTitle || post.ogTitle || `${post.title} | NetronomicWeb`;
     const description = post.seoDescription || post.metaDescription || post.excerpt || 'Discover actionable strategies on web design, development and SEO.';
     const ogImage = toAbsoluteImageUrl(post.ogImage || post.featuredImage);
-    const articleUrl = `https://netronomic.com/blog/${encodeURIComponent(post.slug)}`;
+    const articleUrl = `https://netronomicweb.com/blog/${encodeURIComponent(post.slug)}`;
     const imageExt = ogImage.toLowerCase().endsWith('.png') ? 'image/png' : ogImage.toLowerCase().endsWith('.webp') ? 'image/webp' : 'image/jpeg';
 
     const renderedHtml = indexHtml

@@ -100,8 +100,9 @@ export const ContactUs: React.FC<ContactUsProps> = ({ preselectedService, siteCo
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase tracking-wider">
             <span>Contact Us</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Let's Build Something <span className="text-sky-600">Extraordinary Together</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Let's Build Something <br className="hidden sm:inline" />
+            <span className="text-blue-600">Extraordinary Together</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
             Reach out via our interactive inquiry form, chat directly on WhatsApp, or email us. We respond within 2 hours!

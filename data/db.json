@@ -13,7 +13,7 @@
       "categories": ["Engineering", "SEO"],
       "tags": ["Core Web Vitals", "Performance", "LCP", "Next.js"],
       "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-      "seoTitle": "Mastering Core Web Vitals in 2026 | Metazivo Engineering",
+      "seoTitle": "Mastering Core Web Vitals in 2026 | NetronomicWeb Engineering",
       "seoDescription": "Comprehensive playbook for achieving 99+ Core Web Vitals scores, sub-800ms LCP, and zero CLS on high-traffic websites.",
       "seoScore": 98,
       "views": 1420
@@ -31,7 +31,7 @@
       "categories": ["AI & Tools", "SEO"],
       "tags": ["GEO", "AI Search", "Gemini", "Optimization"],
       "featuredImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-      "seoTitle": "Generative Engine Optimization (GEO) Guide | Metazivo",
+      "seoTitle": "Generative Engine Optimization (GEO) Guide | NetronomicWeb",
       "seoDescription": "Step-by-step methodology to structure your technical content for citation in Gemini and AI-driven search models.",
       "seoScore": 94,
       "views": 980
@@ -49,7 +49,7 @@
       "categories": ["Engineering", "Web Dev"],
       "tags": ["Architecture", "React", "Vite", "Node.js"],
       "featuredImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
-      "seoTitle": "Full-Stack SPA Architecture Guide | Metazivo Engineering",
+      "seoTitle": "Full-Stack SPA Architecture Guide | NetronomicWeb Engineering",
       "seoDescription": "Architectural guidelines for pairing Vite with Node.js and dynamic SEO prerendering.",
       "seoScore": 96,
       "views": 750
@@ -63,9 +63,9 @@
       "size": 45200,
       "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=300&q=80",
       "createdAt": "2026-07-11T00:00:00Z",
-      "name": "metazivo_logo.png",
-      "altText": "Metazivo Digital Agency Minimalist Premium Brand Identity",
-      "caption": "Metazivo Main Brand Mark"
+      "name": "netronomicweb_logo.png",
+      "altText": "NetronomicWeb Digital Agency Minimalist Premium Brand Identity",
+      "caption": "NetronomicWeb Main Brand Mark"
     },
     {
       "folder": "website-development",
@@ -92,7 +92,7 @@
   ],
   "leads": [
     {
-      "message": "Hello Metazivo, we want to redesign our clinic website. Our current site is extremely slow and has terrible SEO. Please let us know your pricing and timelines.",
+      "message": "Hello NetronomicWeb, we want to redesign our clinic website. Our current site is extremely slow and has terrible SEO. Please let us know your pricing and timelines.",
       "name": "Sarah Jenkins",
       "status": "unread",
       "phone": "+1 415 882 1930",
@@ -105,7 +105,7 @@
     {
       "phone": "+92 300 1234567",
       "id": "lead-2",
-      "message": "We need an elegant Shopify store for our luxury apparel brand and we are looking for Metazivo to run Facebook and Meta ad campaigns.",
+      "message": "We need an elegant Shopify store for our luxury apparel brand and we are looking for NetronomicWeb to run Facebook and Meta ad campaigns.",
       "createdAt": "2026-07-10T15:10:00Z",
       "service": "Shopify Development & Meta Ads",
       "name": "Ahmed Khan",
@@ -226,7 +226,7 @@
   "tags": [],
   "pages": [
     {
-      "seoDescription": "Metazivo builds custom high-performance websites, optimized WordPress stores, Shopify websites, and runs advanced Meta and Google Ads campaigns.",
+      "seoDescription": "NetronomicWeb builds custom high-performance websites, optimized WordPress stores, Shopify websites, and runs advanced Meta and Google Ads campaigns.",
       "slug": "home",
       "title": "Home",
       "isSystem": true,
@@ -237,23 +237,23 @@
         "Shopify",
         "Meta Ads"
       ],
-      "content": "<h2>Metazivo Agency Core</h2><p>Our custom-built, optimized landing page architecture.</p>",
+      "content": "<h2>NetronomicWeb Agency Core</h2><p>Our custom-built, optimized landing page architecture.</p>",
       "id": "page-home",
-      "seoTitle": "Metazivo | Premium Digital Agency for High-Performance Architectures"
+      "seoTitle": "NetronomicWeb | Premium Digital Agency for High-Performance Architectures"
     },
     {
       "seoKeywords": [
         "about agency",
-        "metazivo developers",
+        "netronomicweb developers",
         "technical agency team"
       ],
       "slug": "about",
       "title": "About",
       "isSystem": true,
-      "seoDescription": "Metazivo's history, mission, and technical values designed to scale software operations globally.",
+      "seoDescription": "NetronomicWeb's history, mission, and technical values designed to scale software operations globally.",
       "id": "page-about",
-      "seoTitle": "About Metazivo | Enterprise Digital Architects",
-      "content": "<h2>We are Metazivo</h2><p>A full-stack engineered agency with global roots.</p>"
+      "seoTitle": "About NetronomicWeb | Enterprise Digital Architects",
+      "content": "<h2>We are NetronomicWeb</h2><p>A full-stack engineered agency with global roots.</p>"
     },
     {
       "isSystem": true,
@@ -267,12 +267,12 @@
       "content": "<h2>Premium Agency Services</h2><p>Explore our engineering capabilities.</p>",
       "slug": "services",
       "title": "Services",
-      "seoTitle": "Our Services | Custom Systems & Marketing Funnels | Metazivo",
+      "seoTitle": "Our Services | Custom Systems & Marketing Funnels | NetronomicWeb",
       "seoDescription": "Web Development, WordPress Custom Themes, Shopify Stores, Advanced SEO audits, and High-ROI Meta advertising."
     },
     {
       "slug": "pricing",
-      "seoTitle": "Pricing Packages & CMS Retainers | Metazivo",
+      "seoTitle": "Pricing Packages & CMS Retainers | NetronomicWeb",
       "id": "page-pricing",
       "seoKeywords": [
         "agency pricing",
@@ -295,7 +295,7 @@
       "isSystem": true,
       "title": "Privacy Policy",
       "seoDescription": "Understand cookies, analytical node monitoring, and lead verification data storage policies.",
-      "seoTitle": "Privacy Policy & GDPR Compliance | Metazivo",
+      "seoTitle": "Privacy Policy & GDPR Compliance | NetronomicWeb",
       "slug": "privacy"
     },
     {
@@ -309,8 +309,8 @@
       "seoDescription": "Review intellectual property guidelines, payment gateways terms, and service liabilities.",
       "slug": "terms",
       "title": "Terms & Conditions",
-      "content": "<h2>Terms of Service Agreement</h2><p>The rules governing the use of the Metazivo network portal.</p>",
-      "seoTitle": "Terms & Conditions Agreement | Metazivo"
+      "content": "<h2>Terms of Service Agreement</h2><p>The rules governing the use of the NetronomicWeb network portal.</p>",
+      "seoTitle": "Terms & Conditions Agreement | NetronomicWeb"
     }
   ],
   "settings": {
@@ -318,8 +318,8 @@
   },
   "contact": {
     "phone": "+92 328 8518557",
-    "email": "mail@metazivo.com",
-    "instagram": "https://instagram.com/metazivo",
+    "email": "mail@netronomicweb.com",
+    "instagram": "https://instagram.com/netronomicweb",
     "linkedin": "https://www.linkedin.com/in/ali-hassan-a5011240a",
     "whatsapp": "+923288518557",
     "facebook": "https://www.facebook.com/share/1DLnu9iaHK/",

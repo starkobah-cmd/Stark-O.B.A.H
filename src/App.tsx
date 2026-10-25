@@ -14,6 +14,7 @@ import { Pricing } from './components/Pricing';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { ContactUs } from './components/ContactUs';
+import { NetworkWebsites } from './components/NetworkWebsites';
 import { Footer } from './components/Footer';
 import { ServiceModal } from './components/ServiceModal';
 import { QuickQuoteModal } from './components/QuickQuoteModal';
@@ -56,7 +57,7 @@ export default function App() {
       }
     );
 
-    // 2. Sync Blog Posts with Firebase & Metazivo API backend
+    // 2. Sync Blog Posts with Firebase & NetronomicWeb API backend
     const postsRef = doc(db, 'settings', 'posts');
     const unsubPosts = onSnapshot(
       postsRef,
@@ -76,7 +77,7 @@ export default function App() {
       }
     );
 
-    // Also fetch posts from local Metazivo backend database (/api/posts)
+    // Also fetch posts from local NetronomicWeb backend database (/api/posts)
     fetch('/api/posts')
       .then((res) => (res.ok ? res.json() : null))
       .then((apiPosts) => {
@@ -237,7 +238,7 @@ export default function App() {
     saveBlogPostsToStorage(newPosts);
     syncPostsToFirebase(newPosts);
 
-    // Save to Metazivo API backend
+    // Save to NetronomicWeb API backend
     try {
       const isNew = existingIndex < 0;
       const url = isNew ? '/api/posts' : `/api/posts/${updatedPost.id}`;
@@ -451,10 +452,13 @@ export default function App() {
               onAddInquiry={handleAddInquiry}
             />
           )}
+
+          {/* 9. Our Other Websites & Digital Portals (Controlled via Backend, NOT in Header Navigation) */}
+          <NetworkWebsites config={siteConfig.networkWebsites} />
         </main>
       )}
 
-      {/* METAZIVO BLOG LISTING PAGE */}
+      {/* NETRONOMICWEB BLOG LISTING PAGE */}
       {blogView === 'blog-list' && (
         <BlogListing
           posts={posts}
@@ -469,7 +473,7 @@ export default function App() {
         />
       )}
 
-      {/* METAZIVO SINGLE BLOG ARTICLE VIEW */}
+      {/* NETRONOMICWEB SINGLE BLOG ARTICLE VIEW */}
       {blogView === 'single-blog' && activeSinglePost && (
         <SingleBlog
           post={activeSinglePost}
@@ -494,7 +498,7 @@ export default function App() {
         />
       )}
 
-      {/* ADMIN PORTAL (PROTECTED WITH METAZIVO GUTENBERG STUDIO) */}
+      {/* ADMIN PORTAL (PROTECTED WITH NETRONOMICWEB GUTENBERG STUDIO) */}
       {(blogView === 'blog-admin' || blogView === 'site-admin') && (
         !isAdminAuthenticated ? (
           <AdminLogin

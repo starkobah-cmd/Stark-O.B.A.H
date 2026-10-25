@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BlogEditorStudio } from './BlogEditorStudio';
 import { PortfolioEditorStudio } from './PortfolioEditorStudio';
+import { NetworkWebsitesManager } from './NetworkWebsitesManager';
 import {
   LayoutDashboard,
   FileText,
@@ -115,6 +116,7 @@ type TabType =
   | 'pages'
   | 'posts'
   | 'portfolio'
+  | 'networkWebsites'
   | 'seo'
   | 'branding'
   | 'social'
@@ -1014,6 +1016,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
               { id: 'pages', label: 'Pages & Sections', icon: Layers, badge: `${totalPagesCount}` },
               { id: 'posts', label: 'Blog Posts', icon: FileText, badge: `${posts.length}` },
               { id: 'portfolio', label: 'Portfolio Projects', icon: Briefcase, badge: `${localConfig.portfolio?.length || 0}` },
+              { id: 'networkWebsites', label: 'Other Websites & Portals', icon: Globe, badge: `${(localConfig.networkWebsites?.buttons || []).length}` },
               { id: 'seo', label: 'Advanced SEO Suite', icon: Sparkles, badge: `${seoHealthScore}%` },
               { id: 'inquiries', label: 'Contact Inquiries', icon: MessageSquare, badge: newInquiriesCount > 0 ? `${newInquiriesCount}` : null, alert: newInquiriesCount > 0 },
               { id: 'branding', label: 'Site Branding & Logo', icon: Settings, badge: null },
@@ -1999,6 +2002,18 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
               />
             )}
           </AnimatePresence>
+
+          {/* TAB 3.7: OTHER WEBSITES & DIGITAL PORTALS SECTION */}
+          {/* ------------------------------------------------------------- */}
+          {activeTab === 'networkWebsites' && (
+            <NetworkWebsitesManager
+              siteConfig={localConfig}
+              onSave={(updatedConfig) => {
+                setLocalConfig(updatedConfig);
+                onSaveSiteConfig(updatedConfig);
+              }}
+            />
+          )}
 
           {/* TAB 4: ADVANCED SEO SUITE (YOAST / RANKMATH STYLE) */}
           {/* ------------------------------------------------------------- */}

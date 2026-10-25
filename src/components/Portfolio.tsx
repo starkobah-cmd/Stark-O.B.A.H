@@ -38,7 +38,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ items = [], siteConfig, on
             <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
             {sectionConfig.badge}
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             {sectionConfig.title}
           </h2>
           <p className="text-base sm:text-lg text-slate-600">

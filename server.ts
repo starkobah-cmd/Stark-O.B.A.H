@@ -77,7 +77,7 @@ function loadDb(): DatabaseSchema {
         categories: ["Engineering", "SEO"],
         tags: ["Core Web Vitals", "Performance", "LCP", "Next.js"],
         featuredImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-        seoTitle: "Mastering Core Web Vitals in 2026 | Metazivo Engineering",
+        seoTitle: "Mastering Core Web Vitals in 2026 | NetronomicWeb Engineering",
         seoDescription: "Comprehensive playbook for achieving 99+ Core Web Vitals scores, sub-800ms LCP, and zero CLS on high-traffic websites.",
         seoScore: 98,
         views: 1420
@@ -95,7 +95,7 @@ function loadDb(): DatabaseSchema {
         categories: ["AI & Tools", "SEO"],
         tags: ["GEO", "AI Search", "Gemini", "Optimization"],
         featuredImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-        seoTitle: "Generative Engine Optimization (GEO) Guide | Metazivo",
+        seoTitle: "Generative Engine Optimization (GEO) Guide | NetronomicWeb",
         seoDescription: "Step-by-step methodology to structure your technical content for citation in Gemini and AI-driven search models.",
         seoScore: 94,
         views: 980
@@ -448,10 +448,10 @@ app.get("/api/analytics", (req, res) => {
 app.get("/api/contact", (req, res) => {
   res.json(db.contact || {
     phone: "+92 328 8518557",
-    email: "mail@metazivo.com",
-    address: "Office 402, Metazivo Heights, Sector F-5, Islamabad, Pakistan",
+    email: "mail@netronomicweb.com",
+    address: "Office 402, NetronomicWeb Heights, Sector F-5, Islamabad, Pakistan",
     facebook: "https://www.facebook.com/share/1DLnu9iaHK/",
-    instagram: "https://instagram.com/metazivo",
+    instagram: "https://instagram.com/netronomicweb",
     linkedin: "https://www.linkedin.com/in/ali-hassan-a5011240a",
     whatsapp: "923288518557"
   });
@@ -471,8 +471,8 @@ app.post("/api/contact", (req, res) => {
 // System Settings / Health
 app.get("/api/settings", (req, res) => {
   res.json(db.settings || {
-    siteTitle: "Metazivo | SEO, AEO & GEO Agency",
-    siteDescription: "Dominate search with Metazivo – expert SEO, AEO, GEO, WordPress development & Meta Ads.",
+    siteTitle: "NetronomicWeb | SEO, AEO & GEO Agency",
+    siteDescription: "Dominate search with NetronomicWeb – expert SEO, AEO, GEO, WordPress development & Meta Ads.",
     customHeadTags: ""
   });
 });
@@ -491,37 +491,12 @@ app.post("/api/settings", (req, res) => {
 // -----------------------------------------------------------------------------
 // SEO PRE-RENDERING & HTML INJECTION
 // -----------------------------------------------------------------------------
-function toAbsoluteImageUrl(imgUrl?: string): string {
-  if (!imgUrl || typeof imgUrl !== "string") {
-    return "https://netronomic.com/og-image.jpg";
-  }
-  const trimmed = imgUrl.trim();
-  if (trimmed.startsWith("data:") || !trimmed) {
-    return "https://netronomic.com/og-image.jpg";
-  }
-  if (trimmed.startsWith("http://")) {
-    return trimmed.replace(/^http:\/\//i, "https://");
-  }
-  if (trimmed.startsWith("https://")) {
-    return trimmed;
-  }
-  if (trimmed.startsWith("/")) {
-    return `https://netronomic.com${trimmed}`;
-  }
-  return `https://netronomic.com/${trimmed}`;
-}
-
 function injectBlogSEO(html: string, pathname: string): string {
   const cleanPath = pathname.replace(/\/+$/, "");
 
   if (cleanPath.startsWith("/blog/")) {
     const rawSlug = cleanPath.replace(/^\/blog\//i, "");
     const decodedSlug = decodeURIComponent(rawSlug).trim();
-
-    let title = "How Choosing a Full-Stack Web & SEO Agency Multiplies Your Business Revenue";
-    let description = "Discover how combining web development and SEO under one agency scales your business revenue.";
-    let ogImage = "https://netronomic.com/og-image.jpg";
-    let articleUrl = `https://netronomic.com/blog/${encodeURIComponent(decodedSlug || rawSlug)}`;
 
     const post = (db.posts || []).find((p) => 
       p.slug === rawSlug || 
@@ -532,30 +507,32 @@ function injectBlogSEO(html: string, pathname: string): string {
     );
 
     if (post) {
-      title = post.seoTitle || post.ogTitle || `${post.title} | Netronomic`;
-      description = post.seoDescription || post.metaDescription || post.excerpt || description;
-      ogImage = toAbsoluteImageUrl(post.ogImage || post.featuredImage);
-      articleUrl = `https://netronomic.com/blog/${encodeURIComponent(post.slug || decodedSlug || rawSlug)}`;
+      const title = post.seoTitle || post.ogTitle || `${post.title} | NetronomicWeb`;
+      const description = post.seoDescription || post.metaDescription || post.excerpt || "Dominate search with NetronomicWeb – expert SEO, AEO, GEO, WordPress development & Meta Ads.";
+      const rawImage = post.ogImage || post.featuredImage || "https://netronomicweb.com/og-image.jpg";
+      const ogImage = rawImage.startsWith("http")
+        ? rawImage
+        : `https://netronomicweb.com${rawImage.startsWith("/") ? "" : "/"}${rawImage}`;
+      const articleUrl = `https://netronomicweb.com/blog/${encodeURIComponent(post.slug || rawSlug)}`;
+      const imageExt = ogImage.toLowerCase().endsWith(".png") ? "image/png" : ogImage.toLowerCase().endsWith(".webp") ? "image/webp" : "image/jpeg";
+
+      const escapeAttr = (str: string) => String(str || "").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const escapeText = (str: string) => String(str || "").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+      return html
+        .replace(/<title>.*?<\/title>/i, `<title>${escapeText(title)}</title>`)
+        .replace(/<meta name="description" content=".*?" \/>/i, `<meta name="description" content="${escapeAttr(description)}" />`)
+        .replace(/<meta property="og:title" content=".*?" \/>/i, `<meta property="og:title" content="${escapeAttr(title)}" />`)
+        .replace(/<meta property="og:description" content=".*?" \/>/i, `<meta property="og:description" content="${escapeAttr(description)}" />`)
+        .replace(/<meta property="og:image" content=".*?" \/>/i, `<meta property="og:image" content="${escapeAttr(ogImage)}" />`)
+        .replace(/<meta property="og:image:secure_url" content=".*?" \/>/i, `<meta property="og:image:secure_url" content="${escapeAttr(ogImage)}" />`)
+        .replace(/<meta property="og:image:type" content=".*?" \/>/i, `<meta property="og:image:type" content="${imageExt}" />`)
+        .replace(/<meta property="og:url" content=".*?" \/>/i, `<meta property="og:url" content="${escapeAttr(articleUrl)}" />`)
+        .replace(/<meta property="og:type" content=".*?" \/>/i, `<meta property="og:type" content="article" />`)
+        .replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${escapeAttr(title)}" />`)
+        .replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${escapeAttr(description)}" />`)
+        .replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${escapeAttr(ogImage)}" />`);
     }
-
-    const imageExt = ogImage.toLowerCase().endsWith(".png") ? "image/png" : ogImage.toLowerCase().endsWith(".webp") ? "image/webp" : "image/jpeg";
-
-    const escapeAttr = (str: string) => str.replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const escapeText = (str: string) => str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-    return html
-      .replace(/<title>.*?<\/title>/i, `<title>${escapeText(title)}</title>`)
-      .replace(/<meta name="description" content=".*?" \/>/i, `<meta name="description" content="${escapeAttr(description)}" />`)
-      .replace(/<meta property="og:title" content=".*?" \/>/i, `<meta property="og:title" content="${escapeAttr(title)}" />`)
-      .replace(/<meta property="og:description" content=".*?" \/>/i, `<meta property="og:description" content="${escapeAttr(description)}" />`)
-      .replace(/<meta property="og:image" content=".*?" \/>/i, `<meta property="og:image" content="${escapeAttr(ogImage)}" />`)
-      .replace(/<meta property="og:image:secure_url" content=".*?" \/>/i, `<meta property="og:image:secure_url" content="${escapeAttr(ogImage)}" />`)
-      .replace(/<meta property="og:image:type" content=".*?" \/>/i, `<meta property="og:image:type" content="${imageExt}" />`)
-      .replace(/<meta property="og:url" content=".*?" \/>/i, `<meta property="og:url" content="${escapeAttr(articleUrl)}" />`)
-      .replace(/<meta property="og:type" content=".*?" \/>/i, `<meta property="og:type" content="article" />`)
-      .replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${escapeAttr(title)}" />`)
-      .replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${escapeAttr(description)}" />`)
-      .replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${escapeAttr(ogImage)}" />`);
   }
 
   return html;
@@ -608,7 +585,7 @@ async function startServer() {
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.status(200).send(rendered);
       } catch (e) {
-        res.status(200).send("<!DOCTYPE html><html><head><title>Metazivo</title></head><body><div id='root'></div></body></html>");
+        res.status(200).send("<!DOCTYPE html><html><head><title>NetronomicWeb Blog</title></head><body><div id='root'></div></body></html>");
       }
     });
   }
@@ -616,16 +593,16 @@ async function startServer() {
   const rawPort = process.env.PORT;
   if (typeof (global as any).PhusionPassenger !== "undefined") {
     (app as any).listen("passenger", () => {
-      console.log("Metazivo Server is running with Phusion Passenger");
+      console.log("NetronomicWeb Server is running with Phusion Passenger");
     });
   } else if (rawPort && isNaN(Number(rawPort))) {
     app.listen(rawPort, () => {
-      console.log(`Metazivo Server is running on socket: ${rawPort}`);
+      console.log(`NetronomicWeb Server is running on socket: ${rawPort}`);
     });
   } else {
     const port = Number(rawPort) || 3000;
     app.listen(port, "0.0.0.0", () => {
-      console.log(`Metazivo Server is running on port ${port} (0.0.0.0)`);
+      console.log(`NetronomicWeb Blog Server is running at http://0.0.0.0:${port}`);
     });
   }
 }

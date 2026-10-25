@@ -155,7 +155,7 @@ export const BlogEditorStudio: React.FC<BlogEditorStudioProps> = ({
           </button>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-sm font-bold text-white">Metazivo Gutenberg Article Studio</span>
+              <span className="text-sm font-bold text-white">NetronomicWeb Gutenberg Article Studio</span>
               <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold uppercase ${
                 formData.status === 'published' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
               }`}>
@@ -329,7 +329,7 @@ export const BlogEditorStudio: React.FC<BlogEditorStudioProps> = ({
               </div>
             </div>
 
-            {/* Metazivo Gutenberg Editor Container */}
+            {/* NetronomicWeb Gutenberg Editor Container */}
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                 <div className="flex items-center gap-2">

@@ -521,7 +521,7 @@ export default function GutenbergEditor({ value, onChange, mediaAssets, onOpenMe
         .run();
     } else {
       // Code mode fallback: compile HTML string
-      const ctaHtml = `<aside class="metazivo-cta-box not-prose my-8 p-6 md:p-7 rounded-2xl border transition-all" data-type="cta-box" data-badge="${rec.badge}" data-title="${rec.title}" data-description="${rec.description}" data-button-text="${rec.buttonText}" data-button-url="${rec.buttonUrl}" data-footer-note="${rec.footerNote}" data-theme="${rec.theme}" data-layout="${rec.layout}">
+      const ctaHtml = `<aside class="netronomicweb-cta-box not-prose my-8 p-6 md:p-7 rounded-2xl border transition-all" data-type="cta-box" data-badge="${rec.badge}" data-title="${rec.title}" data-description="${rec.description}" data-button-text="${rec.buttonText}" data-button-url="${rec.buttonUrl}" data-footer-note="${rec.footerNote}" data-theme="${rec.theme}" data-layout="${rec.layout}">
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
     <div class="space-y-2.5 max-w-xl">
       <div class="cta-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">${rec.badge}</div>
@@ -530,7 +530,7 @@ export default function GutenbergEditor({ value, onChange, mediaAssets, onOpenMe
       <p class="cta-footer text-xs font-medium m-0 pt-1">${rec.footerNote}</p>
     </div>
     <div class="shrink-0 md:self-center">
-      <a href="${rec.buttonUrl}" class="metazivo-cta-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm tracking-wide text-white">${rec.buttonText}</a>
+      <a href="${rec.buttonUrl}" class="netronomicweb-cta-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm tracking-wide text-white">${rec.buttonText}</a>
     </div>
   </div>
 </aside>`;
@@ -668,7 +668,7 @@ export default function GutenbergEditor({ value, onChange, mediaAssets, onOpenMe
                 type="text"
                 value={htmlSearch}
                 onChange={(e) => setHtmlSearch(e.target.value)}
-                placeholder="Search inside HTML code (e.g. metazivo-cta-box, table, h2)..."
+                placeholder="Search inside HTML code (e.g. netronomicweb-cta-box, table, h2)..."
                 className="w-full bg-transparent text-slate-200 placeholder:text-slate-500 focus:outline-none text-xs"
               />
               {htmlSearch && (
@@ -767,7 +767,7 @@ export default function GutenbergEditor({ value, onChange, mediaAssets, onOpenMe
                     Auto-Detected Smart CTA for Article
                   </h3>
                   <p className="text-xs text-slate-400">
-                    Our semantic analyzer examined your article content and picked the most relevant MetaZivo tool.
+                    Our semantic analyzer examined your article content and picked the most relevant NetronomicWeb tool.
                   </p>
                 </div>
               </div>
@@ -953,21 +953,21 @@ export default function GutenbergEditor({ value, onChange, mediaAssets, onOpenMe
           color: #f8fafc !important;
         }
 
-        /* In-Editor Preview styling for Metazivo CTA Box Node */
+        /* In-Editor Preview styling for NetronomicWeb CTA Box Node */
         .tiptap-container .ProseMirror .gutenberg-cta-block-node {
           margin: 1.75rem 0;
         }
-        .tiptap-container .ProseMirror .metazivo-cta-box {
+        .tiptap-container .ProseMirror .netronomicweb-cta-box {
           color: #0f172a !important;
         }
-        .tiptap-container .ProseMirror .metazivo-cta-box * {
+        .tiptap-container .ProseMirror .netronomicweb-cta-box * {
           color: inherit;
         }
-        .tiptap-container .ProseMirror .metazivo-cta-box h3 {
+        .tiptap-container .ProseMirror .netronomicweb-cta-box h3 {
           margin-top: 0 !important;
           margin-bottom: 0.5rem !important;
         }
-        .tiptap-container .ProseMirror .metazivo-cta-btn {
+        .tiptap-container .ProseMirror .netronomicweb-cta-btn {
           color: #ffffff !important;
         }
       `}</style>
