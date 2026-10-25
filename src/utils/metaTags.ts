@@ -19,6 +19,7 @@ export interface HeadMetaConfig {
   description?: string;
   keywords?: string;
   ogImage?: string;
+  ogType?: string;
   canonicalUrl?: string;
   googleSiteVerification?: string;
   customSchema?: string;
@@ -32,6 +33,7 @@ export function applyHeadMeta({
   description,
   keywords,
   ogImage,
+  ogType,
   canonicalUrl,
   googleSiteVerification,
   customSchema,
@@ -59,7 +61,23 @@ export function applyHeadMeta({
 
   if (ogImage) {
     setOrUpdateMeta('property', 'og:image', ogImage);
+    setOrUpdateMeta('property', 'og:image:secure_url', ogImage);
     setOrUpdateMeta('name', 'twitter:image', ogImage);
+  }
+
+  if (ogType) {
+    setOrUpdateMeta('property', 'og:type', ogType);
+  }
+
+  if (canonicalUrl) {
+    setOrUpdateMeta('property', 'og:url', canonicalUrl);
+    let canonicalTag = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement('link');
+      canonicalTag.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.setAttribute('href', canonicalUrl);
   }
 
   if (googleSiteVerification) {

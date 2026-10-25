@@ -407,24 +407,49 @@ app.post("/api/settings", (req, res) => {
     res.status(500).json({ error: "Failed to update settings" });
   }
 });
+function toAbsoluteImageUrl(imgUrl) {
+  if (!imgUrl || typeof imgUrl !== "string") {
+    return "https://netronomic.com/og-image.jpg";
+  }
+  const trimmed = imgUrl.trim();
+  if (trimmed.startsWith("data:") || !trimmed) {
+    return "https://netronomic.com/og-image.jpg";
+  }
+  if (trimmed.startsWith("http://")) {
+    return trimmed.replace(/^http:\/\//i, "https://");
+  }
+  if (trimmed.startsWith("https://")) {
+    return trimmed;
+  }
+  if (trimmed.startsWith("/")) {
+    return `https://netronomic.com${trimmed}`;
+  }
+  return `https://netronomic.com/${trimmed}`;
+}
 function injectBlogSEO(html, pathname) {
   const cleanPath = pathname.replace(/\/+$/, "");
-  let title = "Metazivo | SEO, AEO & GEO Agency for Rapid Ranking Growth";
-  let description = "Dominate search with Metazivo \u2013 expert SEO, AEO, GEO, WordPress development & Meta Ads. Get high-performance websites that rank fast and convert better.";
-  let ogImage = "https://metazivo.com/og-image.jpg";
   if (cleanPath.startsWith("/blog/")) {
-    const slug = cleanPath.replace(/^\/blog\//i, "");
-    const post = (db.posts || []).find((p) => p.slug === slug || p.id === slug);
+    const rawSlug = cleanPath.replace(/^\/blog\//i, "");
+    const decodedSlug = decodeURIComponent(rawSlug).trim();
+    let title = "How Choosing a Full-Stack Web & SEO Agency Multiplies Your Business Revenue";
+    let description = "Discover how combining web development and SEO under one agency scales your business revenue.";
+    let ogImage = "https://netronomic.com/og-image.jpg";
+    let articleUrl = `https://netronomic.com/blog/${encodeURIComponent(decodedSlug || rawSlug)}`;
+    const post = (db.posts || []).find(
+      (p) => p.slug === rawSlug || p.id === rawSlug || p.slug === decodedSlug || p.title && p.title.toLowerCase() === decodedSlug.toLowerCase() || p.slug && p.slug.toLowerCase() === decodedSlug.toLowerCase()
+    );
     if (post) {
-      title = post.seoTitle || `${post.title} | Metazivo Blog`;
-      description = post.seoDescription || post.excerpt || description;
-      if (post.featuredImage) {
-        ogImage = post.featuredImage;
-      }
+      title = post.seoTitle || post.ogTitle || `${post.title} | Netronomic`;
+      description = post.seoDescription || post.metaDescription || post.excerpt || description;
+      ogImage = toAbsoluteImageUrl(post.ogImage || post.featuredImage);
+      articleUrl = `https://netronomic.com/blog/${encodeURIComponent(post.slug || decodedSlug || rawSlug)}`;
     }
+    const imageExt = ogImage.toLowerCase().endsWith(".png") ? "image/png" : ogImage.toLowerCase().endsWith(".webp") ? "image/webp" : "image/jpeg";
+    const escapeAttr = (str) => str.replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const escapeText = (str) => str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return html.replace(/<title>.*?<\/title>/i, `<title>${escapeText(title)}</title>`).replace(/<meta name="description" content=".*?" \/>/i, `<meta name="description" content="${escapeAttr(description)}" />`).replace(/<meta property="og:title" content=".*?" \/>/i, `<meta property="og:title" content="${escapeAttr(title)}" />`).replace(/<meta property="og:description" content=".*?" \/>/i, `<meta property="og:description" content="${escapeAttr(description)}" />`).replace(/<meta property="og:image" content=".*?" \/>/i, `<meta property="og:image" content="${escapeAttr(ogImage)}" />`).replace(/<meta property="og:image:secure_url" content=".*?" \/>/i, `<meta property="og:image:secure_url" content="${escapeAttr(ogImage)}" />`).replace(/<meta property="og:image:type" content=".*?" \/>/i, `<meta property="og:image:type" content="${imageExt}" />`).replace(/<meta property="og:url" content=".*?" \/>/i, `<meta property="og:url" content="${escapeAttr(articleUrl)}" />`).replace(/<meta property="og:type" content=".*?" \/>/i, `<meta property="og:type" content="article" />`).replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${escapeAttr(title)}" />`).replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${escapeAttr(description)}" />`).replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${escapeAttr(ogImage)}" />`);
   }
-  let modified = html.replace(/<title>.*?<\/title>/i, `<title>${title}</title>`).replace(/<meta name="description" content=".*?" \/>/i, `<meta name="description" content="${description}" />`).replace(/<meta property="og:title" content=".*?" \/>/i, `<meta property="og:title" content="${title}" />`).replace(/<meta property="og:description" content=".*?" \/>/i, `<meta property="og:description" content="${description}" />`).replace(/<meta property="og:image" content=".*?" \/>/i, `<meta property="og:image" content="${ogImage}" />`).replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${title}" />`).replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${description}" />`).replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${ogImage}" />`);
-  return modified;
+  return html;
 }
 async function startServer() {
   const distPath = path.join(process.cwd(), "dist");

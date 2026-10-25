@@ -28,6 +28,7 @@ import {
 import { BlogPost, BlogComment } from '../types';
 import { Logo } from './Logo';
 import { ArticleRenderer, extractArticleHeadings } from './ArticleRenderer';
+import { applyHeadMeta } from '../utils/metaTags';
 
 interface SingleBlogProps {
   post: BlogPost;
@@ -165,7 +166,24 @@ export const SingleBlog: React.FC<SingleBlogProps> = ({
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [post]);
+
+    const rawImg = post.ogImage || post.featuredImage;
+    const fullImg = rawImg
+      ? rawImg.startsWith('http')
+        ? rawImg
+        : `https://netronomic.com${rawImg.startsWith('/') ? '' : '/'}${rawImg}`
+      : 'https://netronomic.com/og-image.jpg';
+
+    const fullUrl = `https://netronomic.com/blog/${encodeURIComponent(post.slug)}`;
+
+    applyHeadMeta({
+      title: resolvedTitle,
+      description: resolvedDesc,
+      ogImage: fullImg,
+      ogType: 'article',
+      canonicalUrl: fullUrl
+    });
+  }, [post, resolvedTitle, resolvedDesc]);
 
   // Extract headings for Table of Contents dynamically (supports both blocks and markdown)
   const tableOfContents = useMemo(() => extractArticleHeadings(post), [post]);
